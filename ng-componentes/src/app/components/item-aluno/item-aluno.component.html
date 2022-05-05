@@ -1,0 +1,8 @@
+<li>
+  <h5>
+    Esse aluno {{ nome }} com nota {{ nota }} e está
+    <span *ngIf="nota < 4" class="badge bg-danger">reprovado</span>
+    <span *ngIf="nota >= 7" class="badge bg-success">aprovado</span>
+    <span *ngIf="nota >= 4 && nota < 7" class="badge bg-warning">de exame</span>
+  </h5>
+</li>

@@ -1,53 +1,87 @@
 <div class="container mt-5 w-50">
-  <h1>Aluno</h1>
+  <div class="card p-4">
+    <h1>Exemplo *ngFOR</h1>
+    <h4>Listagem de Alunos</h4>
+    <ul>
+      <app-item-aluno
+        *ngFor="let itemAluno of alunos; let first = first"
+        [idade]="itemAluno.idade"
+        [nome]="itemAluno.nome"
+        [nota]="itemAluno.nota"
+      >
+      </app-item-aluno>
+    </ul>
 
-  <p>Aluno {{ alunoIndividual.nome }} tem {{ alunoIndividual.idade }} anos</p>
-
-  <div class="mb-3">
-    <label for="nota" class="form-label">Informe a nota do aluno</label>
-    <input
-      [(ngModel)]="alunoIndividual.nota"
-      type="number"
-      min="0"
-      max="10"
-      minlength="1"
-      maxlength="2"
-      class="form-control"
-      id="nota"
-      placeholder="Informe a nota"
-    />
+    <p *ngIf="!alunos?.length">Não há alunos matriculados</p>
   </div>
-  <h5>
-    Esse aluno com nota {{ alunoIndividual.nota }} e está
-    <span *ngIf="alunoIndividual.nota < 4" class="badge bg-danger"
-      >reprovado</span
-    >
-    <span *ngIf="alunoIndividual.nota >= 7" class="badge bg-success"
-      >aprovado</span
-    >
-    <span
-      *ngIf="alunoIndividual.nota >= 4 && alunoIndividual.nota < 7"
-      class="badge bg-warning"
-      >de exame</span
-    >
-  </h5>
 
   <hr class="hr my-4" />
 
-  <h1>Listagem de Alunos</h1>
+  <div class="card p-4">
+    <h1>Exemplo Interpolação / Two-way data binding</h1>
 
-  <ul>
-    <!-- <pre>{{ alunos | json}}</pre> -->
+    <div class="mb-3">
+      <label for="nota" class="form-label">Informe a nota do aluno</label>
+      <input
+        [(ngModel)]="alunoIndividual.nota"
+        type="number"
+        min="0"
+        max="10"
+        minlength="1"
+        maxlength="2"
+        class="form-control"
+        id="nota"
+        placeholder="Informe a nota"
+      />
+    </div>
+    <h3>
+      Esse aluno {{ alunoIndividual.nome }} com nota
+      {{ alunoIndividual.nota }} e está
+      <span *ngIf="alunoIndividual.nota < 4" class="badge bg-danger"
+        >reprovado</span
+      >
+      <span *ngIf="alunoIndividual.nota >= 7" class="badge bg-success"
+        >aprovado</span
+      >
+      <span
+        *ngIf="alunoIndividual.nota >= 4 && alunoIndividual.nota < 7"
+        class="badge bg-warning"
+        >de exame</span
+      >
+    </h3>
+  </div>
 
-    <li *ngFor="let aluno of alunos">
-      <h5>
-        Esse aluno com nota {{ aluno.nota }} e está
-        <span *ngIf="aluno.nota < 4" class="badge bg-danger">reprovado</span>
-        <span *ngIf="aluno.nota >= 7" class="badge bg-success">aprovado</span>
-        <span *ngIf="aluno.nota >= 4 && aluno.nota < 7" class="badge bg-warning"
-          >de exame</span
-        >
-      </h5>
-    </li>
-  </ul>
+  <hr class="hr my-4" />
+
+  <div class="card p-4">
+    <h1>Exemplo Property binding em propriedades do HTML</h1>
+    <img
+      [height]="100"
+      [width]="100"
+      [src]="configImage.urlIonic || configImage.urlAngular"
+      [alt]="
+        configImage.ehAppAngular ? configImage.altAngular : configImage.altIonic
+      "
+    />
+
+    <h1 [class.personalizada]="desejaPersonalizar">
+      Exemplo Classe personalizada
+    </h1>
+    <h1 [style.color]="!desejaPersonalizar ? 'red' : 'green'">
+      Exemplo Style personalizado
+    </h1>
+  </div>
+
+  <hr class="hr my-4" />
+
+  <div class="card p-4">
+    <h1>Exemplos Binding entre componentes</h1>
+    <app-base-button></app-base-button>
+
+    <app-base-button [titulo]="'Salvar'" (cliqueDoBotao)="salvar()" [classeCor]="'btn-primary'"></app-base-button>
+
+    <app-base-button titulo="Cancelar" classeCor="btn-danger" (cliqueDoBotao)="cancelar()"></app-base-button>
+
+    <app-base-button titulo="Voltar" (cliqueDoBotao)="voltar()"></app-base-button>
+  </div>
 </div>
