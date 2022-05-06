@@ -1,5 +1,6 @@
+import { IBase } from "./base.model";
 
-export interface IBebida {
-  titulo: string;
-  enderecoImagem: string;
+export interface IBebida extends IBase {
+  descricao: string;
+  valor: number;
 }

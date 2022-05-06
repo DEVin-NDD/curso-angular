@@ -1,4 +1,5 @@
-export interface IMenu {
-  titulo: string;
-  enderecoImagem: string;
+import { IBase } from "./base.model";
+
+export interface IMenu extends IBase {
+  path: string;
 }
