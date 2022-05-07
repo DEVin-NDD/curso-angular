@@ -2,21 +2,28 @@
   "comidas": [
     {
       "id": 1,
-      "titulo": "COMIDA 1",
+      "titulo": "SUSHI",
       "enderecoImagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rJExVvxt_mpPIGXj158zUortqVCC8587Og&usqp=CAU",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 15
     },
     {
       "id": 2,
-      "titulo": "COMIDA 2",
+      "titulo": "ESPETINHO",
       "enderecoImagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rJExVvxt_mpPIGXj158zUortqVCC8587Og&usqp=CAU",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 20
     },
     {
       "id": 3,
-      "titulo": "COMIDA 3",
+      "titulo": "PORÇÃO DE BATATA",
+      "enderecoImagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rJExVvxt_mpPIGXj158zUortqVCC8587Og&usqp=CAU",
+      "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
+      "valor": 30
+    },
+    {
+      "id": 4,
+      "titulo": "X-SALADA",
       "enderecoImagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rJExVvxt_mpPIGXj158zUortqVCC8587Og&usqp=CAU",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 30
@@ -25,28 +32,28 @@
   "bebidas": [
     {
       "id": 1,
-      "titulo": "BEBIDA 1",
+      "titulo": "SUCO LARANJA",
       "enderecoImagem": "https://imagensemoldes.com.br/wp-content/uploads/2020/10/Ilustracao-Cocktail-PNG-924x1024.png",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 10
     },
     {
       "id": 2,
-      "titulo": "BEBIDA 2",
+      "titulo": "COCA LATA",
       "enderecoImagem": "https://imagensemoldes.com.br/wp-content/uploads/2020/10/Ilustracao-Cocktail-PNG-924x1024.png",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 15
     },
     {
       "id": 3,
-      "titulo": "BEBIDA 3",
+      "titulo": "CERVEJA SKOL",
       "enderecoImagem": "https://imagensemoldes.com.br/wp-content/uploads/2020/10/Ilustracao-Cocktail-PNG-924x1024.png",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 15
     },
     {
       "id": 4,
-      "titulo": "BEBIDA 4",
+      "titulo": "SPRITE 2L",
       "enderecoImagem": "https://imagensemoldes.com.br/wp-content/uploads/2020/10/Ilustracao-Cocktail-PNG-924x1024.png",
       "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.",
       "valor": 15

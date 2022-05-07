@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { LISTA_BEBIDAS_MOCK } from 'src/app/constants/bebidas-mock';
 import { IBebida } from 'src/app/models/bebida.model';
 import { BebidaService } from 'src/app/services/bebida.service';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
   selector: 'ngf-bebida-lista',
@@ -12,7 +11,10 @@ import { BebidaService } from 'src/app/services/bebida.service';
 export class BebidaListaComponent implements OnInit {
   listaBebida: IBebida[] = [];
 
-  constructor(private bebidaService: BebidaService) {}
+  constructor(
+    private bebidaService: BebidaService,
+    private pedidoService: PedidoService
+  ) {}
 
   ngOnInit(): void {
     console.log('ngOnInit');
@@ -27,22 +29,12 @@ export class BebidaListaComponent implements OnInit {
       });
   }
 
-  adicionarBebidas() {
-    const bebida = {
-      id: this.listaBebida.length + 1,
-      titulo: `BEBIDA ${this.listaBebida.length + 1}`,
-      enderecoImagem:
-        'https://imagensemoldes.com.br/wp-content/uploads/2020/10/Ilustracao-Cocktail-PNG-924x1024.png',
-      descricao:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus, aut quo, sit temporibus, explicabo distinctio aperiam cupiditate incidunt suscipit quam corrupti? Fuga tempore rem incidunt, numquam vitae voluptates dolorem.',
-      valor: 15.0,
-    };
+  adicionarBebida(bebida: IBebida) {
+    this.pedidoService.adicionarItemPedido(bebida);
+  }
 
-    this.bebidaService.adicionarBebida(bebida)
-      .subscribe((resultado: IBebida) => {
-        console.log('resultado ', resultado);
-        this.listaBebida.push(resultado);
-        // this.buscarBebidas();
-      });
+  adicionarBebidaComQuantidade(itemComQuantidade: any) {
+    this.pedidoService
+      .adicionarItensPedido(itemComQuantidade.item, itemComQuantidade.quantidade);
   }
 }

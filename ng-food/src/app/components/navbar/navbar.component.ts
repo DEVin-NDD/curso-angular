@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
   selector: 'ngf-navbar',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  contador = 50;
-  constructor() { }
+  qtdeItemPedido = 0;
+
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit(): void {
   }
 
+  buscaTotalItem() {
+    return this.pedidoService.buscarTotalItensPedido();
+  }
 }

@@ -26,19 +26,21 @@
         <span class="fs-4">NG-FOOD</span>
       </a>
 
-      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" routerLink=""
+      <nav class="navbar-container d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="item-nav me-3 py-2 text-decoration-none" routerLinkActive="active" routerLink="" [routerLinkActiveOptions]="{exact: true}"
           >Cardápio</a
         >
-        <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/bebidas"
+        <a class="item-nav me-3 py-2 text-decoration-none" routerLinkActive="active" routerLink="/bebidas"
           >Bebidas</a
         >
-        <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/comidas"
+        <a class="item-nav me-3 py-2 text-decoration-none" routerLinkActive="active" routerLink="/comidas"
           >Comidas</a
         >
-        <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/comidas"
-          >{{contador}} Pedidos</a
-        >
+        <a class="item-nav me-3 py-2 text-decoration-none" routerLinkActive="active" routerLink="/pedido"
+          >
+          <span class="badge badge-pill btn btn-primary">{{buscaTotalItem()}}</span> Pedido
+        </a>
+
       </nav>
     </div>
   </header>
